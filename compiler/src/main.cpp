@@ -39,6 +39,8 @@ int main(int argc, const char *argv[])
 
 	// 输出解析得到的 AST, 其实就是个字符串
 	// ast->Dump();
+	// std::cout << "ast:" << std::endl;
+	// std::cout << *ast << std::endl;
 
 	FILE *outputfp = freopen(output, "w", stdout);
 
@@ -57,7 +59,6 @@ int main(int argc, const char *argv[])
 		cout << strIR;
 	else if (strcmp(mode, "-riscv") == 0)
 	{
-
 		koopa_program_t program;
 		koopa_error_code_t err_code = koopa_parse_from_string(strIR.c_str(), &program);
 		assert(err_code == KOOPA_EC_SUCCESS); // 确保解析时没有出错

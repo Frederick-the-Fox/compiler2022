@@ -62,8 +62,8 @@ class CompUnitAST : public BaseAST
 {
 public:
     // 用智能指针管理对象
-    // vector<unique_ptr<FuncDefAST>> func_def_list;
-    // vector<unique_ptr<DeclAST>> decl_list;
+    vector<unique_ptr<FuncDefAST>> func_def_list;
+    vector<unique_ptr<DeclAST>> decl_list;
     vector<unique_ptr<DeclPFuncDefAST>> list;
     void Dump() const;
     unique_ptr<KoopaProgram> SynIR() const;

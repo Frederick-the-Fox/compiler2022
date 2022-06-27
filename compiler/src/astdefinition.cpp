@@ -41,11 +41,14 @@ void CompUnitAST::Dump() const
 {
 
     cout << "CompUnitAST { ";
+    // std::cout << "begin" << std::endl;
     // for (auto iter = func_def_list.begin(); iter != func_def_list.end(); iter++)
     //     (*iter)->Dump();
+    //     std::cout << "mid" << std::endl;
 
     cout << " }";
 }
+
 unique_ptr<KoopaProgram> CompUnitAST::SynIR() const
 {
     initST();
